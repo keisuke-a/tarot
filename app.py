@@ -3,7 +3,7 @@ import streamlit as st
 import openai
 import secret_keys  # 外部ファイルにAPI keyを保存
 
-openai.api_key = secret_keys.openai_api_key
+openai.api_key = st.secrets.OpenAIAPI.openai_api_key
 
 system_prompt = """
 このスレッドの全ての質問に対して以下のルールに厳格に従って答えてください。
